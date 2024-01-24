@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "Creato Display Reg";
+  src: url("./fonts/creato_display/CreatoDisplay-Regular.otf");
+}
+@font-face {
+  font-family: "Creato Display Bold";
+  src: url("./fonts/creato_display/CreatoDisplay-Bold.otf");
+}
+:root{
+  --bg: #454765;
+  --white: #eeeeee;
+  --dark-red: #dd2828;
+  --box-shadow: 0 2px 2px rgba(0,0,0,.15);
+}
+html{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Creato Display Reg";
+}
+body {
+  background-color: var(--bg);
+  margin: 0;
+  padding: 20px;
+}
+main{
+  background-color: var(--white);
+  height: 400px;
+  max-width: 800px;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.title{
+  font-size: 1.5rem;
+  margin: 0;
+  font-family: "Creato Display Bold";
+}
+.instructions{
+  text-align: center;
+  width: 80%;
+  font-family: "Creato Display Reg";
+}
+.dice-container{
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+  gap: 30px;
+}
+.die-face{
+  height: 50px;
+  width: 50px;
+  box-shadow: var(--box-shadow);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.die-num{
+  font-size: 2rem;
+}
+.roll-dice{
+  font-family: "Creato Display Bold";
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  height: 50px;
+  width: 150px;
+  background-color: var(--dark-red);
+  border: none;
+  color: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+}
+.roll-dice:hover{
+  transform: scale(0.9);
+}
+.roll-dice:active{
+  box-shadow: inset 5px 5px 10px -3px rgba(0,0,0,.7);
+}
